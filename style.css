@@ -19,7 +19,9 @@ header {
     width: 100vw;
     background-color: #333333;
     color: white;
+    padding: 1ch;
     h1{
+        font-size: clamp(0.5em, 5vw, 3em);
         text-align:center;
     }
 }
@@ -73,6 +75,7 @@ header {
         }
 }
 .nav--btn{display: none;}
+.nav--label{display: none;}
 @media (max-width: 631px){
     .nav__std {
         flex-direction: column;
@@ -83,14 +86,7 @@ header {
         transition-duration: 350ms;
         transition-timing-function: linear;
     }
-    .nav--btn{
-        display: block;
-        width: 100vw;
-        height: max-content;
-        background-color: #444444;
-        color:white;
-        text-align: center;
-    }
+    .nav--label{display: block;}
     .nav--btn:checked + .nav__std{
         height: calc(5*1em);
     }
